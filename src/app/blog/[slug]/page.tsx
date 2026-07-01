@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure";
 
 type Params = Promise<{ slug: string }>;
 
@@ -49,10 +50,16 @@ export default async function BlogPost({ params }: { params: Params }) {
         <p className="mt-2 text-sm text-zinc-500">
           {formatDate(post.date)} · Por {post.author}
         </p>
+        {post.hook && (
+          <p className="mt-4 text-lg font-medium italic text-zinc-700 dark:text-zinc-300">
+            {post.hook}
+          </p>
+        )}
       </header>
       <div className="prose prose-zinc max-w-none dark:prose-invert">
         <MDXRemote source={post.content} />
       </div>
+      <AffiliateDisclosure />
     </article>
   );
 }

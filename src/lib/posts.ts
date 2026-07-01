@@ -11,6 +11,7 @@ export type PostMeta = {
   excerpt: string;
   cover?: string;
   author: string;
+  hook?: string;
   tags: string[];
 };
 
@@ -30,6 +31,7 @@ function readPostFile(slug: string): Post {
     excerpt: data.excerpt ?? "",
     cover: data.cover,
     author: data.author ?? "Sara",
+    hook: data.hook,
     tags: data.tags ?? [],
     content,
   };
