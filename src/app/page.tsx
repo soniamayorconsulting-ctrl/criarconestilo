@@ -8,16 +8,16 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
       <section className="mb-16">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           Criar con estilo
         </h1>
-        <p className="mt-4 max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-4 max-w-xl text-lg text-ink/70">
           Ideas, recomendaciones y reflexiones honestas sobre maternidad,
           crianza y estilo de vida, sin perder la cabeza en el intento.
         </p>
         <Link
           href="/blog"
-          className="mt-6 inline-block rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
+          className="mt-6 inline-block rounded-full bg-terracotta px-5 py-3 text-sm font-medium text-cream hover:bg-terracotta-dark"
         >
           Ver todos los posts
         </Link>
@@ -25,7 +25,7 @@ export default function Home() {
 
       {posts.length > 0 && (
         <section>
-          <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-zinc-500">
+          <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-sage">
             Últimos posts
           </h2>
           <div>

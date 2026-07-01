@@ -44,19 +44,19 @@ export default async function BlogPost({ params }: { params: Params }) {
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
       <header className="mb-8">
-        <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           {post.title}
         </h1>
-        <p className="mt-2 text-sm text-zinc-500">
+        <p className="mt-2 text-sm text-ink/50">
           {formatDate(post.date)} · Por {post.author}
         </p>
         {post.hook && (
-          <p className="mt-4 text-lg font-medium italic text-zinc-700 dark:text-zinc-300">
+          <p className="mt-4 text-lg font-medium italic text-terracotta">
             {post.hook}
           </p>
         )}
       </header>
-      <div className="prose prose-zinc max-w-none dark:prose-invert">
+      <div className="prose max-w-none">
         <MDXRemote source={post.content} />
       </div>
       <AffiliateDisclosure />
